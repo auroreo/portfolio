@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Inria+Sans:wght@300;400;700&display=swap');
+
+:root {
+    --yellow-color: #DDC02C;
+    --purple-color: #4C4C6D;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html {
+    font-family: 'Inria Sans';
+    font-weight: 300;
+}
+
+a {
+    color: var(--purple-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    
+}
+
+/* **************** HEADER **************** */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Barlow Semi Condensed';
+    font-size: 25px;
+    padding: 2em;
+}
+
+#title-portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title-portfolio span {
+    font-style: italic;
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 2em;
+}
+
+/* **************** FOOTER **************** */
+
+#footer {
+    background-color: var(--purple-color);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+    padding: 1em;
+    color: white;
+}
+
