@@ -13,6 +13,7 @@
 
 html {
     font-family: 'Inria Sans';
+    color: var(--purple-color);
     font-weight: 300;
 }
 
@@ -23,7 +24,15 @@ a {
 }
 
 a:hover {
-    filter: invert(64%) sepia(48%) saturate(611%) hue-rotate(13deg) brightness(107%) contrast(93%);
+    filter: brightness(0) saturate(100%) invert(89%) sepia(87%) saturate(2881%) hue-rotate(328deg) brightness(88%) contrast(96%);
+}
+
+.title {
+    font-family: 'Barlow Semi Condensed';
+}
+
+h2 {
+    font-size: 30px;
 }
 
 /* **************** HEADER **************** */
@@ -31,20 +40,28 @@ a:hover {
 nav {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     font-family: 'Barlow Semi Condensed';
     font-size: 25px;
-    padding: 2em;
+    padding: 1em;
 }
 
 nav #title-portfolio {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 30px;
 }
 
-nav #title-portfolio span {
+nav #subtitle-portfolio {
+    display: flex;
+    gap: 10px;
     font-style: italic;
     font-size: 20px;
+}
+
+nav #subtitle-portfolio img {
+    width: 20px;
 }
 
 nav ul {
@@ -71,3 +88,15 @@ footer div {
     gap: 2em;
 }
 
+/* **************** PROJETS **************** */
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects #skills {
+    display: flex;
+    gap: 1em;
+}

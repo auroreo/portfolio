@@ -3,7 +3,12 @@ Vue.component('component-header', {
     <nav>
         <a href="./index.html" id="title-portfolio">
             <div>Aurore Vernet</div>
-            <span>- Portfolio -</span>
+            <div id="subtitle-portfolio">
+                <img src="./img/icon-dev.svg"></img>
+                <span>Portfolio</span>
+                <img src="./img/icon-design.svg"></img>
+            </div>
+            
         </a>
         <ul>
             <li v-for="item in sections">
@@ -41,7 +46,7 @@ Vue.component('component-footer', {
     template: `
     <div>
         <a href="mailto:aurore.vernet@lamanu-student.fr">
-            <img src="./img/logo-mail.svg" alt="Logo mail">
+            <img src="./img/icon-mail.svg" alt="Logo mail">
         </a>
         <a href="https://www.linkedin.com/in/aurore-vernet/" target="_blank">
             <img src="./img/logo-linkedin.svg" alt="Logo LinkedIn">
