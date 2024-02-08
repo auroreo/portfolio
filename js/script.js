@@ -60,4 +60,3 @@ let header = new Vue({
 let footer = new Vue({
     el: "footer"
 });
-
