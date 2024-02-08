@@ -1,25 +1,45 @@
-Vue.component('nav-bar', {
-    template: `<nav>
-    <ul>
-        <li>
-            <a href="./"></a>
-        </li>
-        <li>
-            <a href=""></a>
-        </li>
-        <li>
-            <a href=""></a>
-        </li>
-        <li>
-            <a href=""></a>
-        </li>
-    </ul>
-    </nav>`
-})
+Vue.component('component-header', {
+    template: `
+    <nav>
+        <a href="./index.html" id="title-portfolio">
+            <div>Aurore Vernet</div>
+            <span>- Portfolio -</span>
+        </a>
+        <ul>
+            <li v-for="item in sections">
+                <a :href="item.slug">{{item.title}}</a>
+            </li>
+        </ul>
+    </nav>
+    `,
+    props: ['slug', 'title'],
+    data() { 
+        return {
+            sections : [
+                {
+                    title : 'Présentation',
+                    slug : './presentation.html'
+                },
+                {
+                    title : 'Parcours',
+                    slug : './parcours.html'
+                },
+                {
+                    title : 'Compétences',
+                    slug : './competences.html'
+                },
+                {
+                    title : 'Projets',
+                    slug : './projets.html'
+                }
+            ]
+        }
+    }
+});
 
 Vue.component('component-footer', {
-    template: 
-    `<div>
+    template: `
+    <div>
         <a href="mailto:aurore.vernet@lamanu-student.fr">
             <img src="./img/logo-mail.svg" alt="Logo mail">
         </a>
@@ -31,8 +51,13 @@ Vue.component('component-footer', {
         </a>
         <span>© Aurore Vernet - 2024</span>
     </div>`
-})
+});
 
-let portfolio = new Vue({
+let header = new Vue({
+    el: "header",
+});
+
+let footer = new Vue({
     el: "footer"
-})
+});
+
