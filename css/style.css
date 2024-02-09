@@ -23,16 +23,20 @@ a {
     cursor: pointer;
 }
 
-a:hover, li a .active {
-    filter: brightness(0) saturate(100%) invert(89%) sepia(87%) saturate(2881%) hue-rotate(328deg) brightness(88%) contrast(96%);
-}
-
 .title {
     font-family: 'Barlow Semi Condensed';
+    text-align: center;
+
 }
 
 h2 {
+    font-size: 40px;
+    text-shadow: var(--yellow-color) 2px 2px;
+}
+
+h3 {
     font-size: 30px;
+    padding-bottom: 1em;
 }
 
 /* **************** HEADER **************** */
@@ -43,7 +47,7 @@ nav {
     align-items: center;
     font-family: 'Barlow Semi Condensed';
     font-size: 25px;
-    padding: 1em;
+    padding: 2em;
 }
 
 nav #title-portfolio {
@@ -69,6 +73,10 @@ nav ul {
     gap: 2em;
 }
 
+nav a:hover,footer a:hover {
+    filter: brightness(0) saturate(100%) invert(89%) sepia(87%) saturate(2881%) hue-rotate(328deg) brightness(88%) contrast(96%);
+}
+
 /* **************** FOOTER **************** */
 
 footer {
@@ -90,13 +98,54 @@ footer div {
 
 /* **************** PROJETS **************** */
 
-#projects {
+#skills {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2em;
 }
 
-#projects #skills {
+#skills #legend {
+    display: flex;
+    gap: 2em;
+}
+
+#skills #legend div {
+    display: flex;
+    gap: 0.5em;
+}
+
+#skills-items {
+    display: flex;
+    gap: 6em;
+    padding: 1em;
+}
+
+#skills-items article div {
     display: flex;
     gap: 1em;
+    padding-bottom: 1em;
+}
+
+#skills-items img {
+    width: 80px;
+}
+
+#skills-items a img {
+    transform: scale(1);
+    transition: transform .5s;
+    
+}
+
+#skills-items a img:hover {
+    transform: scale(1.2);
+}
+
+#skills-items-2 div {
+    display: flex;
+    justify-content: center;
+}
+
+#skills-items-2 img {
+    width: 150px;
 }
