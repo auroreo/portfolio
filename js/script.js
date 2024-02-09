@@ -12,34 +12,42 @@ Vue.component('component-header', {
         </a>
         <ul>
             <li v-for="item in sections">
-                <a :href="item.slug">{{item.title}}</a>
+                <a :href="item.slug" @click="keepHover">{{item.title}}</a>
             </li>
         </ul>
     </nav>
     `,
     props: ['slug', 'title'],
-    data() { 
+    methods: {
+        keepHover(e) {
+            console.log('success');
+            let old = document.querySelector('li a .active');
+            old.classList.remove('active');
+            e.target.classList.add('active')
+        }
+    },
+    data() {
         return {
-            sections : [
+            sections: [
                 {
-                    title : 'Présentation',
-                    slug : './presentation.html'
+                    title: 'Présentation',
+                    slug: './presentation.html'
                 },
                 {
-                    title : 'Parcours',
-                    slug : './parcours.html'
+                    title: 'Parcours',
+                    slug: './parcours.html'
                 },
                 {
-                    title : 'Compétences',
-                    slug : './competences.html'
+                    title: 'Compétences',
+                    slug: './competences.html'
                 },
                 {
-                    title : 'Projets',
-                    slug : './projets.html'
+                    title: 'Projets',
+                    slug: './projets.html'
                 }
             ]
         }
-    }
+    },
 });
 
 Vue.component('component-footer', {

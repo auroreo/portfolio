@@ -23,7 +23,7 @@ a {
     cursor: pointer;
 }
 
-a:hover {
+a:hover, li a .active {
     filter: brightness(0) saturate(100%) invert(89%) sepia(87%) saturate(2881%) hue-rotate(328deg) brightness(88%) contrast(96%);
 }
 
