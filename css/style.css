@@ -39,6 +39,10 @@ h3 {
     padding-bottom: 1em;
 }
 
+main {
+    padding: 3em;
+}
+
 /* **************** HEADER **************** */
 
 nav {
@@ -47,7 +51,7 @@ nav {
     align-items: center;
     font-family: 'Barlow Semi Condensed';
     font-size: 25px;
-    padding: 2em;
+    padding-top: 1em;
 }
 
 nav #title-portfolio {
@@ -71,6 +75,13 @@ nav #subtitle-portfolio img {
 nav ul {
     display: flex;
     gap: 2em;
+    background-color: var(--purple-color);
+    padding: 15px 20px 15px 20px;
+    border-radius: 50px;
+}
+
+nav ul a {
+    color: white;
 }
 
 nav a:hover,footer a:hover {
@@ -81,9 +92,6 @@ nav a:hover,footer a:hover {
 
 footer {
     background-color: var(--purple-color);
-    position: fixed;
-    bottom: 0;
-    left: 0;
     display: flex;
     justify-content: center;
     width: 100%;
