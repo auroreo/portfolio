@@ -40,18 +40,18 @@ h3 {
 }
 
 main {
-    padding: 3em;
+    padding: 3em 3em 5em 3em;
 }
 
 /* **************** HEADER **************** */
 
 nav {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+
     font-family: 'Barlow Semi Condensed';
     font-size: 25px;
-    padding-top: 1em;
+    padding-top: 1.5em;
+    padding-left: 15%;
 }
 
 nav #title-portfolio {
@@ -73,6 +73,8 @@ nav #subtitle-portfolio img {
 }
 
 nav ul {
+    position: fixed;
+    right: 10%;
     display: flex;
     gap: 2em;
     background-color: var(--purple-color);
@@ -91,10 +93,13 @@ nav a:hover,footer a:hover {
 /* **************** FOOTER **************** */
 
 footer {
+    position: fixed;
+    bottom: 0;
     background-color: var(--purple-color);
     display: flex;
     justify-content: center;
     width: 100%;
+    height: 1em;
     padding: 1em;
     color: white;
 }
