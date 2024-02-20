@@ -77,9 +77,10 @@ nav ul {
     right: 10%;
     display: flex;
     gap: 2em;
-    background-color: var(--purple-color);
+    background-color: #4c4c6dc7;
     padding: 15px 20px 15px 20px;
     border-radius: 50px;
+    backdrop-filter: blur(10px);
 }
 
 nav ul a {
@@ -95,7 +96,8 @@ nav a:hover,footer a:hover {
 footer {
     position: fixed;
     bottom: 0;
-    background-color: var(--purple-color);
+    background-color: #4c4c6dda;
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     width: 100%;
@@ -136,6 +138,7 @@ footer div {
 
 #skills-items article div {
     display: flex;
+    justify-content: center;
     gap: 1em;
     padding-bottom: 1em;
 }
@@ -159,6 +162,6 @@ footer div {
     justify-content: center;
 }
 
-#skills-items-2 img {
-    width: 150px;
+#skills-items-2 img,.big-logo {
+    width: 150px !important;
 }
