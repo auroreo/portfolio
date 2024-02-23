@@ -137,7 +137,7 @@ footer div {
     padding: 1em;
 }
 
-#skills-items article h3 {
+#skills-items article h3,#skills-items-2 article h3 {
     padding-bottom: 1em;
 }
 

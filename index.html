@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
-    <script defer src="./js/script.js"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer type="module" src="./js/script.js"></script>
     <title>Aurore Vernet - Portfolio</title>
 </head>
-<body>
+<body id="app">
     <header>
         <component-header></component-header>
     </header>
     <main>
+        <section id="about">
+
+        </section>
+        <section id="experience">
+
+        </section>
+        <section id="skills">
+            <component-skills></component-skills>
+        </section>
+        <section id="projects">
+            <component-projects></component-projects>
+        </section>
     </main>
     <footer>
         <component-footer></component-footer>
