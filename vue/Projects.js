@@ -5,7 +5,9 @@ export default {
     <section>
         <article v-for="project in projects">
             <a :href="project.link" target="_blank">
-                <img :src="project.path" :alt="project.alt">
+                <div class="container-img">
+                    <img :src="project.path" :alt="project.alt">
+                </div>
                 <h3>{{project.title}}</h3>
                 <span><em>{{project.date}}</em></span>
                 <h4>{{project.subtitle}}</h4>
@@ -39,20 +41,20 @@ export default {
                 },
                 {
                     link: '',
-                    path: '',
+                    path: 'img/projects/logo-JFLMQMP.png',
                     alt: 'Logo Je filme le métier qui me plaît',
                     title: 'OPÉRATION WEB',
                     date: 'novembre 2023 - janvier 2024',
                     subtitle: 'Participation de notre promotion au concours "Je filme le métier qui me plaît"',
                     missions: [
                         'Mission : Réaliser une vidéo sur un métier auquel forme notre formation en incluant un préjugé sur celui-ci',
-                        '>- Brainstorming, scénario, script, séquençage, storyboard avec Figma',
+                        '- Brainstorming, scénario, script, séquençage, storyboard avec Figma',
                         '- Montage avec Adobe Premiere Pro'
                     ]
                 },
                 {
                     link: 'https://auroreo.github.io/ranking_of_films/',
-                    path: '',
+                    path: 'img/projects/logo-ranking.svg',
                     alt: 'Logo Ranking of Films',
                     title: 'RANKING OF FILMS',
                     date: 'janvier 2024', 

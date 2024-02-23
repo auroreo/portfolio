@@ -48,7 +48,6 @@ main {
 
 nav {
     display: flex;
-
     font-family: 'Barlow Semi Condensed';
     font-size: 25px;
     padding-top: 1.5em;
@@ -74,6 +73,7 @@ nav #subtitle-portfolio img {
 }
 
 nav ul {
+    z-index: 2;
     position: fixed;
     right: 10%;
     display: flex;
@@ -197,4 +197,14 @@ footer div {
     background-color: rgba(245, 245, 245, 1);
     padding: 2em;
     border-radius: 15px;
+}
+
+#projects section article a .container-img {
+    width: 300px;
+    display: flex;
+    align-self: center;
+}
+
+#projects section article a img {
+    width: 100%;
 }
