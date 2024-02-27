@@ -1,28 +1,26 @@
 export default {
      template: `
     <nav>
-        <a href="./index.html" id="title-portfolio">
-            <div>Aurore Vernet</div>
-            <div id="subtitle-portfolio">
-                <img src="./img/icon-dev.svg"></img>
-                <span>Portfolio</span>
-                <img src="./img/icon-design.svg"></img>
-            </div>
+        <a href="#home" id="title-portfolio">
+            <img src="">
         </a>
         <ul>
-            <li v-for="item in sections">
-                <a :href="item.slug" @click="keepHover">{{item.title}}</a>
+            <li v-for="section in sections">
+                <a :href="section.path" @click="displaySection">{{section.title}}</a>
             </li>
         </ul>
     </nav>
     `,
     props: ['slug', 'title'],
     methods: {
-        keepHover(e) {
-            console.log('success');
-            let old = document.querySelector('li a .active');
-            old.classList.remove('active');
-            e.target.classList.add('active')
+        // keepHover(e) {
+        //     console.log('success');
+        //     let old = document.querySelector('li a .active');
+        //     old.classList.remove('active');
+        //     e.target.classList.add('active')
+        // }
+        displaySection() {
+    
         }
     },
     data() {
@@ -30,19 +28,19 @@ export default {
             sections: [
                 {
                     title: 'Présentation',
-                    slug: ''
+                    path: '#about'
                 },
                 {
                     title: 'Parcours',
-                    slug: ''
+                    path: '#experience'
                 },
                 {
                     title: 'Compétences',
-                    slug: ''
+                    path: '#skills'
                 },
                 {
                     title: 'Projets',
-                    slug: ''
+                    path: '#projects'
                 }
             ]
         }

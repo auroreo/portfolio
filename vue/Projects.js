@@ -10,7 +10,7 @@ export default {
                 </div>
                 <h3>{{project.title}}</h3>
                 <span><em>{{project.date}}</em></span>
-                <h4>{{project.subtitle}}</h4>
+                <span><strong>{{project.subtitle}}</strong></span>
                 <ul>
                     <li v-for="mission in project.missions">
                     {{mission}}

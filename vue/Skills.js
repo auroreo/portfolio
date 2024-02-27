@@ -55,7 +55,7 @@ export default {
             <h3 class="title">FRAMEWORKS</h3>
             <div>
                 <span v-for="framework in frameworks">
-                    <a :href="framework.link">
+                    <a :href="framework.link" target="u_blank">
                         <img :src="framework.path" :alt="framework.alt">
                     </a>
                 </span>
@@ -96,7 +96,8 @@ export default {
             languages: [
                 {
                     path: './img/skills/logo-html.svg',
-                    alt: 'Logo HTML'
+                    alt: 'Logo HTML',
+                    link: 'https://auroreo.github.io/projet-bonappetit/'
                 },
                 {
                     path: './img/skills/logo-css.svg',

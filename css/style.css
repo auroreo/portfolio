@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Inria+Sans:wght@300;400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
 :root {
     --yellow-color: #DDC02C;
     --purple-color: #4C4C6D;
@@ -15,12 +17,13 @@ html {
     font-family: 'Inria Sans';
     color: var(--purple-color);
     font-weight: 300;
+    font-size: 20px;
 }
 
 a {
     color: var(--purple-color);
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .title {
@@ -34,7 +37,7 @@ h2 {
     text-shadow: var(--yellow-color) 2px 2px;
 }
 
-h3 {
+h3, h4 {
     font-size: 30px;
     font-family: 'Barlow Semi Condensed';
 
@@ -42,6 +45,14 @@ h3 {
 
 main {
     padding: 3em 3em 5em 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+
+hr {
+    width: 50%;
+    align-self: center;
 }
 
 /* **************** HEADER **************** */
@@ -92,24 +103,94 @@ nav a:hover,footer a:hover {
     filter: brightness(0) saturate(100%) invert(89%) sepia(87%) saturate(2881%) hue-rotate(328deg) brightness(88%) contrast(96%);
 }
 
-/* **************** FOOTER **************** */
+/* **************** HOME **************** */
 
-footer {
-    position: fixed;
-    bottom: 0;
-    background-color: #4c4c6dda;
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 1em;
-    padding: 1em;
-    color: white;
+h1 {
+    font-size: 40px;
 }
 
-footer div {
+.coding-style {
+    font-family: 'Fira Mono';
+    font-size: 50px;
+    background: linear-gradient(to right, #4C4C6D 40%, #DDC02C 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#home {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 2em;
+}
+
+#home section {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+#home article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(90%/3);
+    background-color: rgba(245, 245, 245, 1);
+    padding: 2em;
+    border-radius: 15px;
+    gap: 2em;
+}
+
+.title-word {
+    animation: color-animation 3s linear infinite;
+}
+
+.title-word-1 {
+    --color-1: var(--yellow-color);
+    --color-2: var(--purple-color);
+    --color-3: var(--purple-color);
+}
+
+.title-word-2 {
+    --color-1: var(--purple-color);
+    --color-2: var(--yellow-color);
+    --color-3: var(--purple-color)
+}
+
+.title-word-3 {
+    --color-1: var(--purple-color);
+    --color-2: var(--purple-color);
+    --color-3: var(--yellow-color);
+}
+
+@keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+}
+
+#home article div {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.title-block {
+    text-align: center;
+}
+
+.see-more {
+    font-size: 17px;
+    text-align: center;
+}
+
+#home .img-container {
+    background-color: white;
+    border-radius: 15px;
 }
 
 /* **************** COMPETENCES **************** */
@@ -207,4 +288,24 @@ footer div {
 
 #projects section article a img {
     width: 100%;
+}
+
+/* **************** FOOTER **************** */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #4c4c6dda;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 1em;
+    padding: 1em;
+    color: white;
+}
+
+footer div {
+    display: flex;
+    gap: 2em;
 }
