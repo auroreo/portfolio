@@ -14,13 +14,13 @@ export default {
             <div>
                 <span v-for="language in languages.slice(0,2)">
                 <a :href="language.link" target="_blank">
-                    <img :src="language.path" :alt="language.alt"
+                    <img :src="language.path" :alt="language.alt">
                 </a>
             </span>
             </div>
            <div>
                 <span v-for="language in languages.slice(2,4)">
-                    <a :href="language.link" target="_blank">
+                    <a :href="language.link" target="_blank"><
                         <img :src="language.path" :alt="language.alt"
                     </a>
                 </span>
@@ -28,7 +28,7 @@ export default {
             <div>
                 <span v-for="language in languages.slice(4,6)">
                     <a :href="language.link" target="_blank">
-                        <img :src="language.path" :alt="language.alt"
+                        <img :src="language.path" :alt="language.alt">
                     </a>
                 </span>
             </div>

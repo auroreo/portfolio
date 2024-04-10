@@ -10,6 +10,6 @@ export default {
         <a href="https://github.com/auroreo" target="_blank">
             <img src="./img/logo-github.svg" alt="Logo GitHub">
         </a>
-        <span>© Aurore Vernet - 2024</span>
-    </div>`,
+    </div>
+    <span>© Aurore Vernet - 2024</span>`,
 }

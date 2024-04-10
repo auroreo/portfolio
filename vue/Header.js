@@ -1,8 +1,8 @@
 export default {
      template: `
     <nav>
-        <a href="#home" id="title-portfolio">
-            <img src="">
+        <a href="#home" id="portfolio-logo">
+            <img src="./img/home/logo-2.svg" alt="Logo"></
         </a>
         <ul>
             <li v-for="section in sections">
@@ -27,19 +27,19 @@ export default {
         return {
             sections: [
                 {
-                    title: 'Présentation',
+                    title: 'PRÉSENTATION',
                     path: '#about'
                 },
                 {
-                    title: 'Parcours',
+                    title: 'PARCOURS',
                     path: '#experience'
                 },
                 {
-                    title: 'Compétences',
+                    title: 'COMPÉTENCES',
                     path: '#skills'
                 },
                 {
-                    title: 'Projets',
+                    title: 'PROJETS',
                     path: '#projects'
                 }
             ]
