@@ -19,7 +19,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     font-family: 'DM Mono';
     font-size: 20px;
 }
@@ -171,51 +171,66 @@ nav a:hover {
 #skills #legend {
     display: flex;
     gap: 2em;
+    font-size: 15px;
+    background-color: white;
+    padding: 1em;
+    border: solid 1px black;
+    box-shadow: 3px 3px 0 black;
 }
 
 #skills #legend div {
     display: flex;
-    gap: 0.5em;
+    gap: 1em;
 }
 
 #skills-items {
     display: flex;
-    gap: 6em;
+    flex-direction: column;
     padding: 1em;
 }
 
-#skills-items article h3,#skills-items-2 article h3 {
-    padding-bottom: 1em;
+#skills-items {
+    display: flex;
+    row-gap: 2em;
+}
+
+#skills-items article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #skills-items article div {
     display: flex;
     justify-content: center;
     gap: 1em;
-    padding-bottom: 1em;
+    flex-wrap: wrap;
+    padding-top: 2em;
 }
 
-#skills-items img {
+#skills-items h3 {
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    font-size: 30px;
+    background-color: white;
+    box-shadow: 5px 5px 0 black;
+    border: solid 1px black;
+}
+
+#skills-items .small-logo {
     width: 80px;
+}
+
+#skills-items .big-logo {
+    width: 144px;
 }
 
 #skills-items a img {
     transform: scale(1);
-    transition: transform .5s;
-    
+    transition: transform .5s; 
 }
 
 #skills-items a img:hover {
     transform: scale(1.2);
-}
-
-#skills-items-2 div {
-    display: flex;
-    justify-content: center;
-}
-
-#skills-items-2 img,.big-logo {
-    width: 150px !important;
 }
 
 /* **************** PROJETS **************** */
@@ -270,7 +285,7 @@ footer {
     padding: 1em;
     background-color: black;
     color: white;
-    font-size: 15px
+    font-size: 15px;
 }
 
 footer div {
