@@ -2,7 +2,7 @@ export default {
      template: `
     <nav>
         <a href="#home" id="portfolio-logo">
-            <img src="./img/home/logo-2.svg" alt="Logo"></
+            <img src="./img/home/logo-2.svg" alt="Logo">
         </a>
         <ul>
             <li v-for="section in sections">
@@ -13,14 +13,8 @@ export default {
     `,
     props: ['slug', 'title'],
     methods: {
-        // keepHover(e) {
-        //     console.log('success');
-        //     let old = document.querySelector('li a .active');
-        //     old.classList.remove('active');
-        //     e.target.classList.add('active')
-        // }
-        displaySection() {
-    
+        displaySection(e) {
+            console.log(e.target);
         }
     },
     data() {
