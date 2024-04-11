@@ -1,49 +1,51 @@
 export default {
     template:
     `
-    <section id=legend>
-        <div v-for="legend in legends">
-            <img :src="legend.path" :alt="legend.alt">
-            <span>{{legend.title}}</span>
+    <section id="skills">
+        <div id=legend>
+            <div v-for="legend in legends">
+                <img :src="legend.path" :alt="legend.alt">
+                <span>{{legend.title}}</span>
+            </div>
         </div>
-    </section>
-    <section id="skills-items">
-        <article id="skills-languages">
-            <h3 class="title">LANGAGES</h3>
-            <div>
-                <span v-for="language in languages">
-                    <a :href="language.link" target="_blank">
-                        <img :src="language.path" :alt="language.alt" :class="language.class">
-                    </a>
-                </span>
-            </div>
-        </article>
-        <article id="skills-tools">
-            <h3 class="title">OUTILS</h3>
-            <div>
-                <span v-for="tool in tools">
-                    <img :src="tool.path" :alt="tool.alt" :class="tool.class">
-                </span>
-            </div>
-        </article>
-        <article id="skills-frameworks">
-            <h3 class="title">FRAMEWORKS</h3>
-            <div>
-                <span v-for="framework in frameworks">
-                    <a :href="framework.link" target="u_blank">
-                        <img :src="framework.path" :alt="framework.alt" :class="framework.class">
-                    </a>
-                </span>
-            </div>
-        </article>
-        <article class="skills-db">   
-            <h3 class="title">BASE DE DONNÉES</h3>
-            <div>
-                <span v-for="database in databases">
-                    <img :src="database.path" :alt="database.alt" :class="database.class"
-                </span>
-            </div>
-        </article>
+        <section id="skills-items">
+            <article id="skills-languages">
+                <h3 class="title">LANGAGES</h3>
+                <div>
+                    <span v-for="language in languages">
+                        <a :href="language.link" target="_blank">
+                            <img :src="language.path" :alt="language.alt" :class="language.class">
+                        </a>
+                    </span>
+                </div>
+            </article>
+            <article id="skills-tools">
+                <h3 class="title">OUTILS</h3>
+                <div>
+                    <span v-for="tool in tools">
+                        <img :src="tool.path" :alt="tool.alt" :class="tool.class">
+                    </span>
+                </div>
+            </article>
+            <article id="skills-frameworks">
+                <h3 class="title">FRAMEWORKS</h3>
+                <div>
+                    <span v-for="framework in frameworks">
+                        <a :href="framework.link" target="u_blank">
+                            <img :src="framework.path" :alt="framework.alt" :class="framework.class">
+                        </a>
+                    </span>
+                </div>
+            </article>
+            <article class="skills-db">   
+                <h3 class="title">BASE DE DONNÉES</h3>
+                <div>
+                    <span v-for="database in databases">
+                        <img :src="database.path" :alt="database.alt" :class="database.class"
+                    </span>
+                </div>
+            </article>
+        </section>
     </section>
     `,
     props: ['path', 'alt', 'title', 'class'],

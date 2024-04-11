@@ -1,8 +1,7 @@
 export default {
     template: 
     `
-    <h2 class="title">MES PROJETS</h2>
-    <section>
+    <section id="projects">
         <article v-for="project in projects">
             <a :href="project.link" target="_blank">
                 <div class="container-img">

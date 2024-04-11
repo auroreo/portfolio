@@ -1,5 +1,6 @@
 const { createApp, ref } = Vue;
 
+import App from "../App.js";
 import Header from "../vue/Header.js";
 import Footer from "../vue/Footer.js";
 import Home from "../vue/Home.js";
@@ -8,15 +9,23 @@ import Experience from "../vue/Experience.js";
 import Skills from "../vue/Skills.js";
 import Projects from "../vue/Projects.js";
 
-let app = createApp({
+// Router - Navigation
+const routes = [
+    {path: '/', component: Home},
+    {path: '/about', component: About},
+    {path: '/experience', component: Experience},
+    {path: '/skills', component: Skills},
+    {path: '/projects', component: Projects}
+]
+
+const router = VueRouter.createRouter({
+    history: VueRouter.createMemoryHistory(),
+    routes,
 });
 
-app.component('component-header', Header);
-app.component('component-footer', Footer);
-app.component('component-home', Home);
-app.component('component-about', About);
-app.component('component-experience', Experience);
-app.component('component-skills', Skills);
-app.component('component-projects', Projects);
+createApp(App)
+.use(router)
+.component('component-header', Header)
+.component('component-footer', Footer)
+.mount('#app')
 
-app.mount('#app')

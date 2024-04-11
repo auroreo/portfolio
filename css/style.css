@@ -47,7 +47,6 @@ a {
 nav {
     display: flex;
     flex-wrap: wrap;
-    font-family: 'Barlow Semi Condensed';
     font-size: 25px;
     justify-content: center;
     row-gap: 1em;
@@ -82,10 +81,6 @@ nav a:hover {
 }
 
 /* **************** HOME **************** */
-
-#home.inactive{
-    display: none;
-}
 
 #home {
     display: flex;
@@ -145,27 +140,14 @@ nav a:hover {
 
 /* **************** ABOUT **************** */
 
-#about.inactive {
-    display: none;
-}
 
 /* **************** ABOUT **************** */
 
-#about.inactive {
-    display: none;
-}
 
 /* **************** EXPERIENCE **************** */
 
-#experience.inactive {
-    display: none;
-}
 
 /* **************** COMPETENCES **************** */
-
-#skills.inactive {
-    display: none;
-}
 
 #skills {
     display: flex;
@@ -174,7 +156,7 @@ nav a:hover {
     gap: 2em;
 }
 
-#skills #legend {
+#legend {
     display: flex;
     gap: 2em;
     font-size: 15px;
@@ -184,7 +166,7 @@ nav a:hover {
     box-shadow: 3px 3px 0 black;
 }
 
-#skills #legend div {
+#legend div {
     display: flex;
     gap: 1em;
 }
@@ -317,6 +299,9 @@ footer div a:hover {
     nav ul {
         flex-direction: row;
         width: fit-content;
+    }
+    nav li a.router-link-active.router-link-exact-active {
+        color: var(--main-color-yellow);
     }
     /* HOME */
     #home div {
