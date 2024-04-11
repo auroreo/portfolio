@@ -1,8 +1,8 @@
 export default {
     template:
     `
-    <article>
+    <section id="about">
     
-    </article>
+    </section>
     `
 }
